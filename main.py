@@ -52,7 +52,7 @@ def encode_word():
         encoding_time = int(time.time() - tic)
 
         st.write(f"Took {encoding_time}sec to encode")
-        st.write(f"The Encoded word with {SupportFunction.k_tag}-{SupportFunction.k}-Repeat-Free is:")
+        st.write(f"The Encoded word is:")
         with st.expander(f"{word_encoded[:90]}..."):
             st.write(word_encoded)
 
