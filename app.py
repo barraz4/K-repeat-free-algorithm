@@ -6,7 +6,7 @@ import main
 st.title("K Repeat Free")
 st.subheader("Algorithm for k=alog(n) with 1<a<2")
 st.write("by: Ben Shlomo and Bar Yossipovitch")
-st.write("Instructed by: Ohad Elishko")
+st.write("Instructed by: Ohad Elishco")
 st.markdown('----')
 
 # Buttons for encode, decode, and report
