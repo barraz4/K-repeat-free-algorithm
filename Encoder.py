@@ -53,7 +53,7 @@ def add_encoding_block(w: str, indices: tuple) -> str:
     check_for_logical_error(w, j + len(code_block))
     w = w[:j] + code_block + w[j + SupportFunction.k_tag:]
     if len(w) < len_w:
-        print(f"encoding block didn't shorten the length\n{w}")
+        print(f"encoding block didn't shorten the length\n{SupportFunction.original_w}")
     return w
 
 
