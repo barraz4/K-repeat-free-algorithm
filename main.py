@@ -1,6 +1,6 @@
 import streamlit as st
 import time
-from Chcker import perform_regression
+from Report import perform_regression
 from Encoder import encode, find_identical_k_window
 from Decoder import decode
 from Expantion import get_changing_block
