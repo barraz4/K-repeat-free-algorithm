@@ -10,6 +10,7 @@ def perform_regression(start_n, final_n, repeat_times, number_of_n):
     n_values = np.linspace(start_n, final_n, number_of_n, dtype=int)
     results = {
         'n': [],
+        'k_identical_windows': [],
         'k_identical_windows_ratio': [],
         'runtime': [],
         'logical_errors': []
@@ -62,6 +63,7 @@ def perform_regression(start_n, final_n, repeat_times, number_of_n):
 
         total_runs = repeat_times - logical_errors - errors  # we stop a run if logical error occurred
         results['n'].append(n)
+        results['k_identical_windows'].append(total_k_windows / total_runs)
         results['k_identical_windows_ratio'].append(total_k_windows / total_runs / n)  # divide by n for normalization
         results['runtime'].append(total_runtime / total_runs)
         results['logical_errors'].append(logical_errors)
@@ -76,6 +78,7 @@ def generate_report(results):
     df = pd.DataFrame({
         'n': results['n'],
         'runtime[sec]': results['runtime'],
+        'k_identical_windows': results['k_identical_windows'],
         'k_identical_windows_ratio': [f"{x:.2e}" for x in results['k_identical_windows_ratio']],
         'logical_errors': results['logical_errors']
     })
