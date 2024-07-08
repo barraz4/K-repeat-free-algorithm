@@ -5,7 +5,7 @@ import main
 # Title and subtitle
 st.title("K Repeat Free")
 st.subheader("Algorithm for k=alog(n) with 1<a<2")
-st.subheader("Base on Repeat-Free Codes paper by Ohad Elishco, Ryan Gabrys, Eitan Yaakobi and Muriel M´edard")
+st.write("Base on Repeat-Free Codes paper by Ohad Elishco, Ryan Gabrys, Eitan Yaakobi and Muriel M´edard")
 st.write("by: Ben Shlomo and Bar Yossipovitch")
 st.write("Supervisor: Ohad Elishco")
 st.markdown('----')
