@@ -77,7 +77,7 @@ def generate_report(results):
     import altair as alt
     df = pd.DataFrame({
         'n': results['n'],
-        'k_identical_windows': results['k_identical_windows'].astype(int),
+        'k_identical_windows': [int(x) for x in results['k_identical_windows']],
         'k_identical_windows_ratio': [f"{x:.2e}" for x in results['k_identical_windows_ratio']],
         'runtime[sec]': results['runtime'],
         'logical_errors': results['logical_errors']
