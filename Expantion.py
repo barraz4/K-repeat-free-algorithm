@@ -45,7 +45,7 @@ def generate_binary_lyndon_words_up_to_bits(last_word):
     min_bits = math.ceil(math.log2(min_val))
 
     if len(last_word) < min_bits:
-        last_word = "0" * min_bits if min_bits % 2 == 1 else "0" * (min_bits + 1)
+        last_word = "0" * (min_bits + 1 + (min_bits % 2))
 
     lyndon_word = ""
     word = last_word
